@@ -1,0 +1,119 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = JKeyApp
+build_property.ProjectDir = C:\Users\pc\Desktop\APP\JKeyApp\
+
+[C:/Users/pc/Desktop/APP/JKeyApp/AdvanceOTPPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.AdvanceOTPPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AdvanceOTPPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AdvanceOTPPage.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = HomePage.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/LoadingPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.LoadingPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = LoadingPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = LoadingPopup.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/PopupPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.PopupPage.xaml
+build_metadata.AdditionalFiles.TargetPath = PopupPage.xaml
+build_metadata.AdditionalFiles.RelativePath = PopupPage.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/ScanQR.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.ScanQR.xaml
+build_metadata.AdditionalFiles.TargetPath = ScanQR.xaml
+build_metadata.AdditionalFiles.RelativePath = ScanQR.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/ScanQRAdvanced.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.ScanQRAdvanced.xaml
+build_metadata.AdditionalFiles.TargetPath = ScanQRAdvanced.xaml
+build_metadata.AdditionalFiles.RelativePath = ScanQRAdvanced.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/SettingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.SettingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SettingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SettingPage.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/SmartOTPPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.SmartOTPPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SmartOTPPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SmartOTPPage.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/VerifyAdvancedPage .xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.VerifyAdvancedPage .xaml
+build_metadata.AdditionalFiles.TargetPath = VerifyAdvancedPage .xaml
+build_metadata.AdditionalFiles.RelativePath = VerifyAdvancedPage .xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/VerifyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.VerifyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = VerifyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = VerifyPage.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/VerifyScanQR.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.VerifyScanQR.xaml
+build_metadata.AdditionalFiles.TargetPath = VerifyScanQR.xaml
+build_metadata.AdditionalFiles.RelativePath = VerifyScanQR.xaml
+
+[C:/Users/pc/Desktop/APP/JKeyApp/VerifyScanQRAdvanced.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = JKeyApp.VerifyScanQRAdvanced.xaml
+build_metadata.AdditionalFiles.TargetPath = VerifyScanQRAdvanced.xaml
+build_metadata.AdditionalFiles.RelativePath = VerifyScanQRAdvanced.xaml

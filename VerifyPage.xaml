@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JKeyApp.VerifyPage"
+              xmlns:viewmodel="clr-namespace:JKeyApp.ViewModels"
+             x:DataType="viewmodel:VerifyOTPPageViewModel"
+             Title="Register Device"
+              Shell.NavBarIsVisible="True"
+            
+             Shell.TabBarIsVisible="False"
+            >
+    <VerticalStackLayout>
+        
+            <Label x:Name="Step1"   IsVisible="{Binding OpenEmail}" Text="Step 1: Please enter your email for register your device!" Margin="20,30,0,0" FontSize="15" Padding="5" VerticalOptions="FillAndExpand" LineBreakMode="CharacterWrap" FontAttributes="Bold"  HorizontalOptions="Center" ></Label>
+
+        
+        <StackLayout Orientation="Horizontal"  IsVisible="{Binding OpenEmail}" Margin="10,0,0,0">
+         
+
+            <!--<Label x:Name="Step1"  FontSize="15" FontAttributes="Bold"  HorizontalOptions="Center" >Step 1: Please enter your email for register your device!</Label>-->
+            
+            <Frame HeightRequest="45" Margin="0,30,15,15" Padding="0" HasShadow="True" BorderColor="White"  HorizontalOptions="FillAndExpand" >
+                <Entry Text="{Binding Email}" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Enter your Email"  />
+            </Frame>
+        </StackLayout>
+
+        <Label x:Name="Step2" IsVisible="{Binding OffEmail}" Text="Step 2: Please open your email and enter your OTP code to verify your device !" Margin="20,30,0,0" FontSize="15" Padding="5" VerticalOptions="FillAndExpand" LineBreakMode="CharacterWrap" FontAttributes="Bold"  HorizontalOptions="Center" ></Label>
+        
+        <StackLayout Orientation="Horizontal"  IsVisible="{Binding OffEmail}"  Margin="20,0,0,0">
+            <!--<Frame ZIndex="1" HasShadow="True" BorderColor="White" HeightRequest="60" WidthRequest="60" CornerRadius="30">
+                <Image Source="lock.png" HeightRequest="25" WidthRequest="25" />
+            </Frame>-->
+            <!--<Label x:Name="Step2" Text="Step 2: Please open your email and enter your OTP code to verify your device!" FontSize="15"  HorizontalOptions="Center" ></Label>-->
+            <Frame HeightRequest="45" Margin="0,30,15,15" Padding="0" HasShadow="True" BorderColor="White"  HorizontalOptions="FillAndExpand" >
+                <Entry Text="{Binding OtpCode}" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Enter your OTP" MaxLength="6" />
+            </Frame>
+            <!--<Frame HeightRequest="45" Margin="-20,0,0,0"  >
+
+                <Label x:Name="TextTime" Text="{Binding Time}" FontSize="15"  HorizontalOptions="Center" ></Label>
+                
+
+            </Frame>-->
+
+        </StackLayout>
+        <StackLayout IsVisible="{Binding IsBusy}" >
+            <ActivityIndicator IsRunning="True"    WidthRequest="40" HeightRequest="40" HorizontalOptions="Center"/>
+            <Label  Text="Please wait ..." HorizontalOptions="Center" FontSize="16" FontAttributes="Bold"  Margin="5" ></Label>
+
+        </StackLayout>
+
+        <Button Text="Send OTP" IsVisible="{Binding OpenEmail}" WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" Command="{Binding SendOTPCommand}" BackgroundColor="DeepSkyBlue" />
+        <Button Text="Verify OTP" IsVisible="{Binding OffEmail}" WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" Command="{Binding RegisterCommand}" BackgroundColor="DeepSkyBlue" />
+        <StackLayout Orientation="Horizontal"  IsVisible="{Binding OpenEmail}" HorizontalOptions="Center" >
+            <Button Text="Back"  WidthRequest="200" CornerRadius="20" Margin="0,30,0,0" HorizontalOptions="Center" Command="{Binding BackCommand}" BackgroundColor="DeepSkyBlue" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"  IsVisible="{Binding OffEmail}" HorizontalOptions="Center" >
+            <Button Text="Back"  WidthRequest="200" CornerRadius="20" Margin="0,30,0,0" HorizontalOptions="Center" Command="{Binding BackEmailCommand}" BackgroundColor="DeepSkyBlue" />
+        </StackLayout>
+        <!--<Button Text="Verify"  WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" Command="{ Binding Source={RelativeSource AncestorType={x:Type viewmodel:SmartOTPPageViewModel}}, Path=CheckOTPFirst}" CommandParameter="{Binding OtpCode}" BackgroundColor="DeepSkyBlue" />-->
+    </VerticalStackLayout>
+</ContentPage>

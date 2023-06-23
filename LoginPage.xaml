@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JKeyApp.LoginPage"
+             Title="LoginPage"
+             Shell.NavBarIsVisible="False"
+           
+             >
+    <VerticalStackLayout Spacing="25" 
+            Padding="30,0" 
+            VerticalOptions="Center"
+                    
+                         >
+        <Image Source="logo" HeightRequest="80" />
+        <StackLayout IsVisible="{Binding IsBusy}">
+            <ActivityIndicator IsRunning="True" ZIndex="5"   WidthRequest="40" HeightRequest="40" HorizontalOptions="Center"/>
+            <Label  Text="Please wait ..." HorizontalOptions="Center" FontSize="16" FontAttributes="Bold"  Margin="5" ></Label>
+            <!--InputTransparent="True"
+            How can I disable all views inside the layout?
+            -->
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Frame ZIndex="1" HasShadow="True" BorderColor="White" HeightRequest="60" WidthRequest="60" CornerRadius="30">
+                <Image Source="user.png" HeightRequest="25" WidthRequest="25" />
+            </Frame>
+            <Frame HeightRequest="50" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White"  HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding Username}" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="User Name" Keyboard="Text" />
+                <!--<Entry Text="abcaaass" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="User Name" Keyboard="Text" IsReadOnly="true" />--> 
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Frame ZIndex="1" HasShadow="True" BorderColor="White" HeightRequest="60" WidthRequest="60" CornerRadius="30">
+                <Image Source="lock.png" HeightRequest="25" WidthRequest="25" />
+            </Frame>
+            <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White"  HorizontalOptions="FillAndExpand" >
+                <Entry Text="{Binding Password}" Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True"/>
+            </Frame>
+        </StackLayout>
+        <Button  IsEnabled="{Binding IsEnabled}"       Text="Sign In" WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" Command="{Binding LoginCommand}"  BackgroundColor="DeepSkyBlue" />
+        
+
+
+    </VerticalStackLayout>
+</ContentPage>

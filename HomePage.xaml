@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JKeyApp.HomePage"
+             xmlns:viewmodel="clr-namespace:JKeyApp.ViewModels"             
+             xmlns:models="clr-namespace:JKeyApp.Models"             
+             x:DataType="viewmodel:HomePageViewModel"
+             Title="Home"
+             >
+    <ScrollView >
+    <StackLayout Margin="10" >
+
+        <CarouselView x:Name="ViewIntroScreens" IndicatorView="indicatorView" HorizontalOptions="FillAndExpand" >
+            <CarouselView.ItemTemplate >
+                <DataTemplate x:DataType="models:IntroScreenModel">
+                    <Grid RowDefinitions="60*,40*">
+                        <Image Source="{Binding IntroImage}" HeightRequest="300"
+               HorizontalOptions="Center" Aspect="AspectFill" Grid.Row="0"></Image>
+                        <VerticalStackLayout Grid.Row="1" >
+                            <Label Text="{Binding IntroTitle}"  HorizontalOptions="Center" FontAttributes="Bold"></Label>
+                            <Label Text="{Binding IntroDescription}"  HorizontalOptions="Center" TextColor="Gray"></Label>
+                        </VerticalStackLayout>
+
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
+            <IndicatorView
+               
+                x:Name="indicatorView"
+                IndicatorSize="10"
+                IndicatorColor="LightGray"
+                SelectedIndicatorColor="{x:StaticResource Primary}"
+                />
+        </StackLayout>
+            <StackLayout IsVisible="{Binding IsBusy}">
+                <ActivityIndicator IsRunning="True"   WidthRequest="40" HeightRequest="40" HorizontalOptions="Center"/>
+                <Label  Text="Please wait ..." HorizontalOptions="Center" FontSize="16" FontAttributes="Bold"  Margin="5" ></Label>
+
+            </StackLayout>
+            <StackLayout>
+              
+
+                <Label  Text="Wellcome to Smart OTP application." FontSize="15" FontAttributes="Bold" Padding="0,10,0,0" HorizontalOptions="Center" ></Label>
+            <Label  Text="You can choose an OTP " FontSize="15" FontAttributes="Bold" Padding="0,0,0,10" HorizontalOptions="Center" ></Label>
+
+                <Button  IsEnabled="{Binding IsEnabled}" Text="Smart OTP" WidthRequest="200" CornerRadius="20" Margin="0,0,0,10" TextColor="#000" BorderColor="#787373" BorderWidth="1" HorizontalOptions="Center"  Command="{Binding SmartOTPCommand}" BackgroundColor="#F5ECEC" />
+                <Button  IsEnabled="{Binding IsEnabled}" Text="Advance OTP" WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" TextColor="#000" BorderColor="#787373" BorderWidth="1"  Command="{Binding AdvanceOTPCommand}" BackgroundColor="#F5ECEC" />
+        </StackLayout>
+       
+       
+        <!--<Button Text="UnRegister" IsVisible="{Binding VisibleView}" Command="{Binding UnRegisterCommand}"></Button>
+        <Button Text="Register" IsVisible="{Binding VisibleButton}" Command="{Binding RegisterCommand}"></Button>-->
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

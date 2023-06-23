@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JKeyApp.SmartOTPPage"
+             xmlns:viewmodel="clr-namespace:JKeyApp.ViewModels"
+             x:DataType="viewmodel:SmartOTPPageViewModel"             
+             Title="Smart OTP"          
+             >
+    <VerticalStackLayout Padding="10"  >
+
+      
+        <StackLayout IsVisible="{Binding OffEmail}">
+            <Image Source="istockphoto_1246021208.jpg"
+               HeightRequest="300"
+               HorizontalOptions="Center"
+               Aspect="AspectFill"                                          
+               />
+            <StackLayout IsVisible="{Binding IsBusy}">
+                <ActivityIndicator IsRunning="True"   WidthRequest="40" HeightRequest="40" HorizontalOptions="Center"/>
+                <Label  Text="Please wait ..." HorizontalOptions="Center" FontSize="16" FontAttributes="Bold"  Margin="5" ></Label>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" IsVisible="{Binding VisibleView}"  Margin="10">
+                <Frame  HorizontalOptions="Center" >
+                    <Label x:Name="Otp" Text="{Binding Otp}" FontSize="25" CharacterSpacing="12" FontAttributes="Bold" TextColor="Blue" ></Label>
+                </Frame>
+                <Frame ZIndex="1" HasShadow="True" BorderColor="White" HeightRequest="70" WidthRequest="70" CornerRadius="35" >
+                    <ImageButton Source="copy.png" SemanticProperties.Description="Copy OTP"   Command="{Binding CopyOtpCommand}" Margin="10"  HeightRequest="28" WidthRequest="28"></ImageButton>
+                </Frame>
+            </StackLayout>
+
+            <Label x:Name="Time" Text="{Binding Time}" FontSize="15" FontAttributes="Bold" Padding="10" HorizontalOptions="Center" IsVisible="{Binding VisibleView}"></Label>
+            <Label  Text="Your device doesn't register." FontSize="15" FontAttributes="Bold" Padding="0,10,0,0" HorizontalOptions="Center" IsVisible="{Binding VisibleButton}"></Label>
+            <Label  Text="Please register for continue !" FontSize="15" FontAttributes="Bold" Padding="0,0,0,10" HorizontalOptions="Center" IsVisible="{Binding VisibleButton}"></Label>
+
+            <Button Text="UnRegister" WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" IsVisible="{Binding VisibleView}" ToolTipProperties.Text="Copy" Command="{Binding UnRegisterCommand}" BackgroundColor="Red" />
+            <Button Text="Register" WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" IsVisible="{Binding VisibleButton}" Command="{Binding RegisterCommand}" BackgroundColor="DeepSkyBlue" />
+
+            <StackLayout Orientation="Horizontal"  IsVisible="{Binding VisibleButton}" HorizontalOptions="Center" >
+                <Button Text="Scan QR" WidthRequest="200" CornerRadius="20" HorizontalOptions="Center" Margin="0,20,0,0" Command="{Binding ScanQRCodeCommand}" BackgroundColor="DeepSkyBlue" />
+            </StackLayout>
+
+        </StackLayout>
+        
+        
+        <!--<StackLayout  IsVisible="{Binding OpenEmail}">
+
+            <Image Source="coming_soon.jpg"
+               HeightRequest="300"
+               HorizontalOptions="Center"
+               Aspect="AspectFill"                                          
+               />
+
+        </StackLayout>-->
+
+
+    </VerticalStackLayout>
+    
+    
+</ContentPage>

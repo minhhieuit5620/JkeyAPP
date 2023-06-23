@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="JKeyApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:JKeyApp"
+    Shell.FlyoutBehavior="Disabled">
+    <!--<ShellContent  ContentTemplate="{DataTemplate local:ScanQR}"
+      
+        Route="ScanQR" />-->
+    <ShellContent
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" />
+
+    <ShellContent  ContentTemplate="{DataTemplate local:VerifyPage}"
+      
+        Route="VerifyPage" />
+
+    <ShellContent  ContentTemplate="{DataTemplate local:VerifyAdvancedPage}"
+      
+        Route="VerifyAdvancedPage" />
+
+
+    <!--<ShellContent  ContentTemplate="{DataTemplate local:ScanQR}"
+      
+        Route="ScanQR" />-->
+    <ShellContent  ContentTemplate="{DataTemplate local:VerifyScanQR}"
+      
+        Route="VerifyScanQR" />
+    <ShellContent  ContentTemplate="{DataTemplate local:VerifyScanQRAdvanced}"
+      
+        Route="VerifyScanQRAdvanced" />
+    <TabBar Route="TabBar" >
+        
+        <Tab Title="Home" Icon="icons_home.png">
+            <ShellContent 
+        ContentTemplate="{DataTemplate local:HomePage}"
+        Route="HomePage" />
+        </Tab>
+        <Tab Title="Smart OTP" Icon="icons_phone.png">
+            <ShellContent 
+        ContentTemplate="{DataTemplate local:SmartOTPPage}"
+        Route="SmartOTPPage" />
+        </Tab>
+        <Tab Title="Advance Otp" Icon="icons_otp_64.png">
+            <ShellContent
+        ContentTemplate="{DataTemplate local:AdvanceOTPPage}"
+        Route="AdvanceOTPPage" />
+        </Tab>
+        <Tab Title="Setting" Icon="icons_setting.png">
+            <ShellContent
+        ContentTemplate="{DataTemplate local:SettingPage}"
+        Route="SettingPage" />
+        </Tab>
+    </TabBar>
+</Shell>
